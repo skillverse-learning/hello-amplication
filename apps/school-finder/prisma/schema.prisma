@@ -17,3 +17,11 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model School {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  name      String?
+  slug      String?  @unique
+  updatedAt DateTime @updatedAt
+}
